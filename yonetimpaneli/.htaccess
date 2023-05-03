@@ -1,0 +1,49 @@
+Options -indexes
+RewriteEngine On
+RewriteBase /zaferakinci/yazilimlar/bmqonline/yonetimpaneli/
+RewriteRule ^liste/(.*)$ index.php?sayfa=liste&tablo=$1 [NC]
+RewriteRule ^modul-ekle$ index.php?sayfa=modul-ekle [NC]
+RewriteRule ^ekle/(.*)$ index.php?sayfa=ekle&tablo=$1 [NC]
+RewriteRule ^duzenle/(.*)/(.*)/(.*)$ index.php?sayfa=duzenle&tablo=$1&ID=$2&lang_id=$3 [NC]
+RewriteRule ^sil/(.*)/(.*)$ index.php?sayfa=sil&tablo=$1&ID=$2 [NC]
+RewriteRule ^seo-ayarlari$ index.php?sayfa=seo-ayarlari [NC]
+RewriteRule ^site-ayarlari$ index.php?sayfa=site-ayarlari [NC]
+RewriteRule ^giris-yap$ login.php [NC]
+RewriteRule ^cikis$ index.php?sayfa=cikis [NC]
+
+RewriteRule ^kullanici-ayarlari index.php?sayfa=kullanici-ayarlari [NC]
+RewriteRule ^slider-ekle$ index.php?sayfa=slider-ekle [NC]
+RewriteRule ^slider-duzenle/(.*)$ index.php?sayfa=slider-duzenle&slide_id=$1 [NC]
+RewriteRule ^slider-sil/(.*)$ index.php?sayfa=slider-sil&slide_id=$1 [NC]
+RewriteRule ^slider-liste$ index.php?sayfa=slider-liste [NC]
+
+RewriteRule ^anasayfa index.php?sayfa=anasayfa [NC]
+RewriteRule ^duzenle-sayfa/(.*)/(.*)$ index.php?sayfa=duzenle-sayfa&section_id=$1&lang_id=$2 [NC]
+RewriteRule ^ikon-duzenle/(.*)$ index.php?sayfa=ikon-duzenle&ID=$1 [NC]
+RewriteRule ^ozellik-duzenle/(.*)$ index.php?sayfa=ozellik-duzenle&feature_id=$1 [NC]
+RewriteRule ^kurumsal/(.*)$ index.php?sayfa=kurumsal&ID=$1 [NC]
+RewriteRule ^duzenle-kurumsal/(.*)/(.*)$ index.php?sayfa=duzenle-kurumsal&ID=$1&lang_id=$2 [NC]
+
+RewriteRule ^resimler/(.*)/(.*)$ index.php?sayfa=resimler&tablo=$1&ID=$2 [NC]
+RewriteRule ^resim-sil/(.*)/(.*)/(.*)/(.*)$ index.php?sayfa=resim-sil&tablo=$1&ID=$2&silinecekID=$3&lang_id=$4 [NC]
+RewriteRule ^kelimeler index.php?sayfa=kelimeler [NC]
+RewriteRule ^kelime-dil-duzenle/(.*)/(.*)$ index.php?sayfa=kelime-dil-duzenle&text_id=$1&lang_id=$2 [NC]
+
+RewriteRule ^menu index.php?sayfa=menu [NC]
+RewriteRule ^dil-duzenle/(.*)/(.*)$ index.php?sayfa=dil-duzenle&ID=$1&lang_id=$2 [NC]
+
+RewriteRule ^dil-ayarlari$ index.php?sayfa=language-settings [NC]
+RewriteRule ^sosyal-medya-ayarlari$ index.php?sayfa=sosyal-medya-ayarlari [NC]
+RewriteRule ^iletisim-ayarlari$ index.php?sayfa=iletisim-ayarlari [NC]
+RewriteRule ^smtp-ayarlari$ index.php?sayfa=smtp-ayarlari [NC]
+RewriteRule ^sayfa/(.*)$ index.php?sayfa=sayfa&page_seflink=$1 [NC]
+RewriteRule ^services/(.*)$ index.php?sayfa=services&section_id=$1 [NC]
+RewriteRule ^add-service/(.*)$ index.php?sayfa=add-service&section_id=$1 [NC]
+RewriteRule ^delete-service/(.*)$ index.php?sayfa=delete-service&service_id=$1 [NC]
+RewriteRule ^edit-service/(.*)$ index.php?sayfa=edit-service&service_id=$1 [NC]
+
+
+RewriteRule ^makaleler$ index.php?sayfa=articles [NC]
+RewriteRule ^makale-ekle$ index.php?sayfa=add-article [NC]
+RewriteRule ^makale-sil/(.*)$ index.php?sayfa=delete-article&ID=$1 [NC]
+RewriteRule ^makale-duzenle/(.*)$ index.php?sayfa=edit-article&ID=$1 [NC]

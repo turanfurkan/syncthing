@@ -1,0 +1,39 @@
+@media (max-width:768px) {
+    .dm-none{
+        display: none !important;
+    }
+}
+
+@media (min-width:768px) {
+    .dc-none{
+        display: none !important;
+    }
+}
+
+.whatsapp-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    z-index: 999;
+}
+
+.whatsapp-float i{
+    font-size: 35px;
+}

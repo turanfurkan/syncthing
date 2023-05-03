@@ -1,0 +1,11 @@
+Options -indexes
+RewriteEngine On
+RewriteBase /fileyurdu.com/
+
+RewriteRule ^teklif-al$ index.php?sayfa=get-a-quote [NC]
+RewriteRule ^kurumsal/(.*)$ index.php?sayfa=corporate&seflink=$1 [NC]
+RewriteRule ^urunler$ index.php?sayfa=products [NC]
+RewriteRule ^bloglar$ index.php?sayfa=blogs [NC]
+RewriteRule ^iletisim$ index.php?sayfa=contact [NC]
+RewriteRule ^urun/(.*)$ index.php?sayfa=product&seflink=$1 [NC]
+RewriteRule ^blog/(.*)$ index.php?sayfa=blog&seflink=$1 [NC]
