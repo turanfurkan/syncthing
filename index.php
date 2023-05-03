@@ -12,7 +12,6 @@ $VT=new VT();
 
 include(DATA . "lang-settings.php");
 
-
 include_once(DATA . "baglanti.php");
 
 define("SITE", $siteURL);
