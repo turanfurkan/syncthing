@@ -2,6 +2,12 @@
 class VT
 {
 
+	// var $sunucu = "localhost";
+	// var $user = "fileyurd_user";
+	// var $password = "SKb18N?wy(JZ";
+	// var $dbname = "fileyurd_db";
+	// var $baglanti;
+
 	var $sunucu = "localhost";
 	var $user = "root";
 	var $password = "";
@@ -376,26 +382,23 @@ class VT
 	}
 
 
-	public function MailGonder($konu , $body, $bodyType)
+	public function MailGonder($mail,$konu , $body, $bodyType)
 	{
-		$contact=$this->VeriGetir("contact_settings","WHERE ID=?",array(1),"ORDER BY ID ASC",1);
-		if ($contact!=false) {
-			$mail=$contact[0]["contact_email"];
-		}
+		
 
 		$posta = new PHPMailer();
 		$posta->CharSet = "UTF-8";
-		$posta->SMTPDebug=1;
+		$posta->SMTPDebug=false;
 		$posta->IsSMTP();                                   // send via SMTP
-		$posta->Host     = "smtp.gmail.com"; // SMTP servers
+		$posta->Host     = "srvc51.turhost.com"; // SMTP servers
 		$posta->SMTPAuth = true;     // turn on SMTP authentication
-		$posta->Username = "furkanturanjob@gmail.com";  // SMTP username
-		$posta->Password = "lqmpktilymhsmlfq"; // SMTP password
-		$posta->SMTPSecure ="tls";
-		$posta->Port     = 587;
-		$posta->From     = "furkanturanjob@gmail.com"; // smtp kullanýcý adýnýz ile ayný olmalý
-		$posta->Fromname = "furkanturanjob@gmail.com";
-		$posta->AddAddress($mail, "furkanturanjob@gmail.com");
+		$posta->Username = "info@fileyurdu.com";  // SMTP username
+		$posta->Password = "RL_K!fSs0&j("; // SMTP password
+		$posta->SMTPSecure ="ssl";
+		$posta->Port     = 465;
+		$posta->From     = "info@fileyurdu.com"; // smtp kullanýcý adýnýz ile ayný olmalý
+		$posta->Fromname = "info@fileyurdu.com";
+		$posta->AddAddress($mail, "info@fileyurdu.com");
 		$posta->IsHTML(true); 
 		$posta->Subject  =  $konu;
 		$posta->Body = $body;

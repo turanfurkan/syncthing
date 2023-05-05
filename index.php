@@ -1,7 +1,7 @@
 <?php
 @session_start();
 @ob_start();
-
+date_default_timezone_set('Europe/Istanbul');
 define("DATA", "data/");
 define("SAYFA", "include/");
 define("SINIF", "yonetimpaneli/class/");
@@ -11,6 +11,7 @@ include_once(SINIF."VT.php");
 $VT=new VT();
 
 include(DATA . "lang-settings.php");
+
 
 include_once(DATA . "baglanti.php");
 

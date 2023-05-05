@@ -464,7 +464,7 @@
                                                     <td class="es-m-p20b" align="center" style="padding:0;Margin:0;width:173px">
                                                         <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                             <tr>
-                                                                <td style="padding:0;Margin:0;font-size:0px" align="center"><img src="https://ycheuf.stripocdn.email/content/guids/CABINET_7e2651a9be25cba93b9112a8541a9ab41e680844cb4747df29133ec5767b65dc/images/logo.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" class="adapt-img" width="173" height="50"></td>
+                                                                <td style="padding:0;Margin:0;font-size:0px" align="center"><img src="https://fileyurdu.com/images/brand/logo.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" class="adapt-img" width="173" height="50"></td>
                                                             </tr>
                                                         </table>
                                                     </td>

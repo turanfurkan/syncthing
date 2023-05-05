@@ -120,7 +120,8 @@ include(DATA . "header.php");
 
                         </div>
                     </div>
-                    <a class="btn btn-primary align-self-center border-0 btn-rounded dm-none" target="_blank" style="background:#43D854;" href="<?= $siteWhatsapp ?><?=$pageTitle?>&nbspMerhabalar&nbsp<?=$productWhatsappText?>"><i class="fab fa-whatsapp"></i> <?= $siteWhatsappDetailTextTitle ?></a>
+                                                            <a class="btn btn-primary align-self-center border-0 btn-rounded appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200" target="_blank" style="background:#43D854;" href="<?= $siteWhatsapp ?><?=$pageTitle?> <?=$productWhatsappText?>"><i class="fab fa-whatsapp"></i> <?= $siteWhatsappDetailTextTitle ?></a>
+
 
                 </div>
                 <div class="col-lg-7 col-xl-6 pe-lg-4 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInRight" data-appear-animation-delay="1100">

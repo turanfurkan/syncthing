@@ -1,7 +1,8 @@
 Options -indexes
 RewriteEngine On
 RewriteBase /fileyurdu.com/
-
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 RewriteRule ^teklif-al$ index.php?sayfa=get-a-quote [NC]
 RewriteRule ^kurumsal/(.*)$ index.php?sayfa=corporate&seflink=$1 [NC]
 RewriteRule ^urunler$ index.php?sayfa=products [NC]

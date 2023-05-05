@@ -63,10 +63,17 @@
                         ob_start();
 $body= include SAYFA . 'contact-mail-templete.php';
 $body = ob_get_clean();
+   
 
-                        
-                        $sendMail=$VT->MailGonder("İletişim Formu",$body,"html");
+                        $sendMail=$VT->MailGonder($siteMail,"İletişim Formu",$body,"html");
+
                         if ($sendMail!=false) {
+                                   ob_start();
+
+                            $bodyReply= include SAYFA . 'contact-reply-mail-templete.php';
+$bodyReply = ob_get_clean();
+                        $sendMailReply=$VT->MailGonder($email,"İletişim Formu",$bodyReply,"html");
+
                             $addDb=$VT->SorguCalistir("INSERT INTO contact_messages","SET fullName=?, email=?, subject=?, message=?, created_date=?",array($fullName,$email,$subject,$message,date("Y-m-d H:i:s")));
                             if ($addDb!=false) {
                                 ?>
@@ -101,7 +108,7 @@ $body = ob_get_clean();
 
                     }
                 ?>
-                <form class="contact-form custom-form-style-1" action="#" method="POST">
+                <form class=" custom-form-style-1" action="#" method="POST">
                     
 
                     <div class="row">

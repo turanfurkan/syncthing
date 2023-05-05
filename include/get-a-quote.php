@@ -60,8 +60,14 @@ $body= include SAYFA . 'quote-mail-templete.php';
 $body = ob_get_clean();
 
                         
-                        $sendMail=$VT->MailGonder("Teklif Formu",$body,"html");
+                        $sendMail=$VT->MailGonder($siteMail, "Teklif Formu",$body,"html");
                         if ($sendMail!=false) {
+                        ob_start();
+
+                            $bodyReply= include SAYFA . 'quote-reply-mail-templete.php';
+$bodyReply = ob_get_clean();
+
+                                                $sendMailUser=$VT->MailGonder($email,"Teklif İsteği Bilgilendirmesi",$bodyReply,"html");
                             $addDb=$VT->SorguCalistir("INSERT INTO quote_requests","SET first_name=?, last_name=?, phone=?, email=?, company_name=?, product_name=?, additional_info=?, created_date=?",array($firstName,$lastName,$phone,$email,$companyName,$productName,$additionalInfo,date("Y-m-d H:i:s")));
                             if ($addDb!=false) {
                                 ?>

@@ -22,7 +22,7 @@ if (isset($_POST["lang_form"])) {
     setcookie("lang", $value, time() + 3600);
     $lang_id = $_COOKIE["lang"];
 ?>
-    <meta http-equiv="refresh" content="0; url=<?= SITE ?>">
+    <meta http-equiv="refresh" content="0; url=https://fileyurdu.com">
 
 <?php
 }

@@ -9,7 +9,7 @@ if($ayarlar!=false)
 	$siteTitle=$ayarlar[0]["site_title"];
 	$siteDescription=$ayarlar[0]["site_description"];
 	$siteKeywords=$ayarlar[0]["site_keywords"];
-	$siteURL=$ayarlar[0]["site_url"];
+	$siteURL="http://localhost/fileyurdu.com/";
 	$siteMaintenence=$ayarlar[0]["site_maintenence"];
 	
 
